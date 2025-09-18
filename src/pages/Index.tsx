@@ -1,12 +1,28 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import { Navigation } from "@/components/Navigation";
+import { Hero } from "@/components/sections/Hero";
+import { About } from "@/components/sections/About";
+import { TechMarquee } from "@/components/TechMarquee";
+import { Projects } from "@/components/sections/Projects";
+import { Contact } from "@/components/sections/Contact";
+import { ScrollToTop } from "@/components/ScrollToTop";
 
 const Index = () => {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="mb-4 text-4xl font-bold">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
-      </div>
+    <div className="min-h-screen">
+      <Navigation />
+      <Hero />
+      <TechMarquee />
+      <About />
+      <Projects />
+      <Contact />
+      <ScrollToTop />
+      
+      {/* Footer */}
+      <footer className="py-8 bg-muted/30 text-center">
+        <p className="text-muted-foreground">
+          © 2024 Paul Emile PECKOUET-BINOMBO. Tous droits réservés.
+        </p>
+      </footer>
     </div>
   );
 };
