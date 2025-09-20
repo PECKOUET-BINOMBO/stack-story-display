@@ -20,7 +20,7 @@ const Index = () => {
       {/* Footer */}
       <footer className="py-8 bg-muted/30 text-center">
         <p className="text-muted-foreground">
-          © 2024 Paul Emile PECKOUET-BINOMBO. Tous droits réservés.
+          © 2025 Paul Emile PECKOUET-BINOMBO. Tous droits réservés.
         </p>
       </footer>
     </div>

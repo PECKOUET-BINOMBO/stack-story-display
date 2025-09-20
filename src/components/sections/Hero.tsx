@@ -1,6 +1,7 @@
 import { ChevronDown, Download } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import heroBackground from "@/assets/hero-bg.jpg";
+import cv from "@/assets/PECKOUET-BINOMBO Paul Emile.pdf";
 
 export function Hero() {
   const scrollToAbout = () => {
@@ -29,7 +30,7 @@ export function Hero() {
           <h1 className="text-6xl md:text-8xl font-bold mb-6 fade-in">
             <span className="text-gradient-hero">Paul Emile</span>
             <br />
-            <span className="text-foreground">PECKOUET-BINOMBO</span>
+            <span className="text-foreground text-white">PECKOUET-BINOMBO</span>
           </h1>
           
           <h2 className="text-2xl md:text-3xl font-light mb-8 text-muted-foreground fade-in fade-in-delay-1">
@@ -42,10 +43,18 @@ export function Hero() {
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center fade-in fade-in-delay-3">
-            <Button className="btn-hero text-lg px-8 py-3">
-              <Download className="mr-2 h-5 w-5" />
-              Télécharger CV
-            </Button>
+            <a
+              href={cv}
+              
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block"
+            >
+              <Button className="btn-hero text-lg px-8 py-3">
+                <Download className="mr-2 h-5 w-5" />
+                Télécharger CV
+              </Button>
+            </a>
             <Button 
               variant="outline" 
               className="btn-glass text-lg px-8 py-3"

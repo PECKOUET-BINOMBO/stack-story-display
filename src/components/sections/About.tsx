@@ -4,7 +4,7 @@ const skills = [
   {
     icon: Code2,
     title: "Frontend Development",
-    description: "React.js, TypeScript, HTML/CSS, TailwindCSS, Bootstrap",
+    description: "JavaSript, React.js, TypeScript, HTML/CSS, TailwindCSS, Bootstrap",
     color: "text-blue-500"
   },
   {
@@ -15,8 +15,8 @@ const skills = [
   },
   {
     icon: Palette,
-    title: "Design & UX",
-    description: "Figma, Canva, WordPress, Design System, UI/UX",
+    title: "Outils & CMS",
+    description: "Figma, Canva, WordPress, Git",
     color: "text-purple-500"
   },
   {
@@ -56,47 +56,7 @@ export function About() {
           ))}
         </div>
 
-        <div className="mt-20 glass rounded-3xl p-8 md:p-12">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div>
-              <h3 className="text-3xl font-bold mb-6">Mon Parcours</h3>
-              <div className="space-y-6">
-                <div className="border-l-4 border-primary pl-6">
-                  <h4 className="text-xl font-semibold text-primary">Orange Digital Center</h4>
-                  <p className="text-muted-foreground">Développement Web/Mobile • 2025</p>
-                </div>
-                <div className="border-l-4 border-accent pl-6">
-                  <h4 className="text-xl font-semibold text-accent">Bakeli School of Technology</h4>
-                  <p className="text-muted-foreground">Programmation Informatique • 2021-2023</p>
-                </div>
-                <div className="border-l-4 border-muted-foreground pl-6">
-                  <h4 className="text-xl font-semibold">BAC Technique ACC</h4>
-                  <p className="text-muted-foreground">Action Communication Commerciale • 2018</p>
-                </div>
-              </div>
-            </div>
-            <div>
-              <h3 className="text-3xl font-bold mb-6">Expériences</h3>
-              <div className="space-y-6">
-                <div className="card-glass">
-                  <h4 className="text-lg font-semibold text-primary">Actu Light Gabon</h4>
-                  <p className="text-sm text-accent">Freelance • Jan-Mar 2024</p>
-                  <p className="text-muted-foreground mt-2">Développement web complet, de la conception à la mise en ligne</p>
-                </div>
-                <div className="card-glass">
-                  <h4 className="text-lg font-semibold text-primary">IHEJGS</h4>
-                  <p className="text-sm text-accent">Freelance • Août-Sep 2023</p>
-                  <p className="text-muted-foreground mt-2">Conception, développement, tests et déploiement</p>
-                </div>
-                <div className="card-glass">
-                  <h4 className="text-lg font-semibold text-primary">Volkeno</h4>
-                  <p className="text-sm text-accent">Stage • Oct-Déc 2022</p>
-                  <p className="text-muted-foreground mt-2">Intégration web front-end et back-end</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+        
       </div>
     </section>
   );

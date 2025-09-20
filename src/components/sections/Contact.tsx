@@ -63,7 +63,7 @@ export function Contact() {
                 <Button 
                   size="lg" 
                   className="btn-hero flex-1"
-                  onClick={() => window.open('https://linkedin.com', '_blank')}
+                  onClick={() => window.open('https://urlr.me/HJ85DF', '_blank')}
                 >
                   <Linkedin className="mr-2 h-5 w-5" />
                   LinkedIn
@@ -71,7 +71,7 @@ export function Contact() {
                 <Button 
                   size="lg" 
                   className="btn-glass flex-1"
-                  onClick={() => window.open('https://instagram.com', '_blank')}
+                  onClick={() => window.open('https://urlr.me/uCngGx', '_blank')}
                 >
                   <Instagram className="mr-2 h-5 w-5" />
                   Instagram
@@ -81,7 +81,7 @@ export function Contact() {
           </div>
 
           {/* Contact Form */}
-          <div className="glass rounded-2xl p-8">
+          {/* <div className="glass rounded-2xl p-8">
             <h3 className="text-2xl font-bold mb-8">Envoyez-moi un message</h3>
             
             <form className="space-y-6">
@@ -115,7 +115,7 @@ export function Contact() {
                 Envoyer le message
               </Button>
             </form>
-          </div>
+          </div> */}
         </div>
       </div>
     </section>

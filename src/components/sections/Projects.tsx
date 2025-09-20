@@ -9,72 +9,7 @@ const projects = [
     description: "Plateforme d'actualités moderne avec interface responsive et gestion de contenu dynamique.",
     category: "Web",
     icon: Globe,
-    technologies: ["React", "Node.js", "Express", "PostgreSQL"],
-    image: "/placeholder.svg",
-    links: {
-      live: "#",
-      github: "#"
-    }
-  },
-  {
-    id: 2,
-    title: "IHEJGS Website",
-    description: "Site institutionnel avec architecture moderne et optimisations SEO avancées.",
-    category: "Web",
-    icon: Globe,
-    technologies: ["Laravel", "PHP", "MySQL", "TailwindCSS"],
-    image: "/placeholder.svg",
-    links: {
-      live: "#",
-      github: "#"
-    }
-  },
-  {
-    id: 3,
-    title: "Mobile Banking App",
-    description: "Application mobile de banque digitale avec authentification biométrique.",
-    category: "Mobile",
-    icon: Smartphone,
-    technologies: ["React Native", "TypeScript", "Node.js", "Prisma"],
-    image: "/placeholder.svg",
-    links: {
-      live: "#",
-      github: "#"
-    }
-  },
-  {
-    id: 4,
-    title: "E-commerce Dashboard",
-    description: "Interface d'administration complète pour plateforme e-commerce avec analytics.",
-    category: "Web",
-    icon: Globe,
-    technologies: ["React", "TypeScript", "Express", "MySQL"],
-    image: "/placeholder.svg",
-    links: {
-      live: "#",
-      github: "#"
-    }
-  },
-  {
-    id: 5,
-    title: "Fitness Tracker App",
-    description: "Application de suivi de fitness avec synchronisation cloud et gamification.",
-    category: "Mobile",
-    icon: Smartphone,
-    technologies: ["React Native", "Firebase", "Node.js"],
-    image: "/placeholder.svg",
-    links: {
-      live: "#",
-      github: "#"
-    }
-  },
-  {
-    id: 6,
-    title: "Brand Identity System",
-    description: "Système d'identité visuelle complet avec guidelines et déclinaisons digitales.",
-    category: "Design",
-    icon: Palette,
-    technologies: ["Figma", "Adobe CC", "Design System"],
+    technologies: ["WordPress"],
     image: "/placeholder.svg",
     links: {
       live: "#",
