@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import { ExternalLink, Github, Smartphone, Globe, Palette } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -21,8 +22,25 @@ const projects = [
 const categories = ["Tous", "Web", "Mobile", "Design"];
 
 export function Projects() {
+  const [scrollY, setScrollY] = useState(0);
+  const [activeCategory, setActiveCategory] = useState("Tous");
+
+  useEffect(() => {
+    const handleScroll = () => setScrollY(window.scrollY);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
-    <section id="projects" className="py-20 bg-gradient-to-br from-muted/30 to-background">
+    <section id="projects" className="py-20 bg-gradient-to-br from-muted/30 to-background relative overflow-hidden">
+      {/* Parallax background */}
+      <div className="absolute inset-0 pointer-events-none">
+        <div 
+          className="absolute top-20 left-20 w-72 h-72 bg-gradient-to-br from-accent/5 to-primary/5 rounded-full blur-3xl"
+          style={{ transform: `translateY(${scrollY * 0.08}px)` }}
+        ></div>
+      </div>
+      
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
@@ -39,8 +57,13 @@ export function Projects() {
           {categories.map((category) => (
             <Button
               key={category}
-              variant="outline"
-              className="btn-glass"
+              variant={activeCategory === category ? "default" : "outline"}
+              className={`transition-all duration-300 ${
+                activeCategory === category 
+                  ? "btn-hero shadow-hero" 
+                  : "btn-glass hover:scale-105"
+              }`}
+              onClick={() => setActiveCategory(category)}
             >
               {category}
             </Button>
@@ -52,8 +75,11 @@ export function Projects() {
           {projects.map((project, index) => (
             <div
               key={project.id}
-              className="card-project group"
-              style={{ animationDelay: `${index * 0.1}s` }}
+              className="card-project group border border-border/50 hover:border-primary/20"
+              style={{ 
+                animationDelay: `${index * 0.1}s`,
+                transform: `translateY(${scrollY * 0.03}px)` 
+              }}
             >
               <div className="relative overflow-hidden">
                 <img 
@@ -63,7 +89,10 @@ export function Projects() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                 <div className="absolute bottom-4 left-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <project.icon className="h-8 w-8 text-primary" />
+                  <div className="relative">
+                    <project.icon className="h-8 w-8 text-primary relative z-10" />
+                    <div className="absolute inset-0 bg-primary/20 rounded-full blur-lg"></div>
+                  </div>
                 </div>
               </div>
               

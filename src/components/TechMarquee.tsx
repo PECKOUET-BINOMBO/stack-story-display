@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import { 
   SiReact, 
   SiNodedotjs, 
@@ -29,15 +30,26 @@ const technologies = [
 ];
 
 export function TechMarquee() {
+  const [scrollY, setScrollY] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => setScrollY(window.scrollY);
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
-    <div className="py-12 overflow-hidden">
+    <div 
+      className="py-12 overflow-hidden relative"
+      style={{ transform: `translateY(${scrollY * 0.05}px)` }}
+    >
       <div className="relative">
         <div className="flex">
           <div className="marquee flex gap-8 pr-8">
             {technologies.map((tech, index) => (
               <div
                 key={index}
-                className="flex items-center gap-3 px-6 py-3 glass rounded-full whitespace-nowrap"
+                className="flex items-center gap-3 px-6 py-3 glass rounded-full whitespace-nowrap hover:scale-105 transition-all duration-300 border border-border/30 hover:border-primary/20"
               >
                 <tech.icon 
                   className="w-6 h-6"
@@ -51,7 +63,7 @@ export function TechMarquee() {
             {technologies.map((tech, index) => (
               <div
                 key={`duplicate-${index}`}
-                className="flex items-center gap-3 px-6 py-3 glass rounded-full whitespace-nowrap"
+                className="flex items-center gap-3 px-6 py-3 glass rounded-full whitespace-nowrap hover:scale-105 transition-all duration-300 border border-border/30 hover:border-primary/20"
               >
                 <tech.icon 
                   className="w-6 h-6"
